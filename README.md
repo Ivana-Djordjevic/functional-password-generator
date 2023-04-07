@@ -12,7 +12,7 @@ This project will enable me to test the limits of my knowledge and understanding
 
 Looks like this: ![a red generate password buttun within a box labeled Generate a Password](pic.jpg)
 
-Link: 
+Link: https://runningaroundintheabyss.github.io/functional-password-generator/
 
 ## Instalations
 
