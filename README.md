@@ -8,7 +8,11 @@
 - The Work:
 I will modify a starter code and render it functional, it is currently unable to generate a password. 
 Not much needs to be touched up on the HTML and CSS codes, the heavy load will fall upon modifying the JS code. 
-This project will enable me to test the limits of my knowledge and understanding of how the core JS concepts are applied and integrated in a functional application. 
+This project will enable me to test the limits of my knowledge and understanding of how the core JS concepts are applied and integrated in a functional setting. 
+
+Looks like this: ![a red generate password buttun within a box labeled Generate a Password](/Users/ivanadjordjevic/bootcamp/Challenges/functional-password-generator/pic.jpg)
+
+Link: 
 
 ## Instalations
 
