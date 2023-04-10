@@ -24,7 +24,7 @@ const generateBtn = document.querySelector("#generate");
 const characterMap = { 
   lower: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'], 
   upper: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-  numeric: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+  number: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
   special: ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '[', '}', ']', '|', '<', ',', '>', '?', '/' ], 
 }
 
@@ -81,7 +81,7 @@ function getPasswordParameters() {
  * @param max 
  * @returns a random integer >0 & <max
  */
-function computeRandomNumberLessThan(max) { // computer random numbers: we need the 
+function computeRandomNumberLessThan(max) { // computer random numbers
   return Math.floor(Math.random() * max);
 }
 //* the getRandomChracter function is responsible for 
@@ -107,8 +107,10 @@ function getRandomCharacter(characterTypes, characterMap) {
   const randomCharacterIndex = computeRandomNumberLessThan(characterOptions.length)
 /** so the choosen index will translate into the actual element */
   const randomCharacter = characterOptions[randomCharacterIndex]
-
-  return randomCharacter 
+ console.log({
+  randomTypeIndex, randomCharacterType, characterOptions, randomCharacterIndex, randomCharacter
+ })
+  return randomCharacter;
 }
 
 function generatePassword() {
@@ -123,26 +125,29 @@ function generatePassword() {
 /** creating password length slots for random characters */
   const passwordCharacters = new Array(passwordLength)
   const characterTypes = passwordParameters.characterTypes
+
 // for password length = 5 
 // const passwordCharacters = [_, _, _, _, _]
 
-    for (const index in passwordCharacters) {
+    for (let index = 0; index < passwordCharacters.length; index++) {
       // we want to randomize each character in the password & abide the user's criteria
       // figure out which character type is gonna be (the value) (upper, etc)
       // which char of that type its gonna be (ie 3, d)
+
       passwordCharacters[index] = getRandomCharacter(characterTypes, characterMap)
     }
-    
+
+  console.log(passwordCharacters)
   // password length: 10 aaaaaaaaa
   // get a random number to grab a random char from choice array (look math.random) x4 
   // use for loops around the random number code and for loop chara length, random loop choice arrays 
   // add the random cchars to a new var you made, use return, 
   /** we have arrays of strings that were selected per the randomization process, and they need to be consolidated in one array 
    * and insure that the password is valid or else regenerate */
-  
-  const password =  computeRandomNumberLessThan(passwordCharacters) + computeRandomNumberLessThan(characterTypes);
+ const password = passwordCharacters.join('');
+ // const password =  computeRandomNumberLessThan(passwordCharacters) + computeRandomNumberLessThan(characterTypes);
 /** password is output of the randomizations and the user's criteria */
-  return password // return the variable here so it is displayed on the screen
+  return password; // return the variable here so it is displayed on the screen
 }
 
 // Write password to the #password input
