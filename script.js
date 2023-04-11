@@ -107,9 +107,7 @@ function getRandomCharacter(characterTypes, characterMap) {
   const randomCharacterIndex = computeRandomNumberLessThan(characterOptions.length)
 /** so the choosen index will translate into the actual element */
   const randomCharacter = characterOptions[randomCharacterIndex]
- console.log({
-  randomTypeIndex, randomCharacterType, characterOptions, randomCharacterIndex, randomCharacter
- })
+
   return randomCharacter;
 }
 
@@ -136,8 +134,6 @@ function generatePassword() {
 
       passwordCharacters[index] = getRandomCharacter(characterTypes, characterMap)
     }
-
-  console.log(passwordCharacters)
   // password length: 10 aaaaaaaaa
   // get a random number to grab a random char from choice array (look math.random) x4 
   // use for loops around the random number code and for loop chara length, random loop choice arrays 
