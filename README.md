@@ -10,7 +10,7 @@ I will modify a starter code and render it functional, it is currently unable to
 Not much needs to be touched up on the HTML and CSS codes, the heavy load will fall upon modifying the JS code. 
 This project will enable me to test the limits of my knowledge and understanding of how the core JS concepts are applied and integrated in a functional setting. 
 
-Looks like this: ![a red generate password buttun within a box labeled Generate a Password](pic.jpg)
+Looks like this: ![a red generate password buttun within a box labeled Generate a Password](Assets/images/pic.jpg)
 
 Link: https://runningaroundintheabyss.github.io/functional-password-generator/
 
